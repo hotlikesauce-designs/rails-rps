@@ -11,10 +11,11 @@ class RockController < ApplicationController
         return "lost"
       else
         return "tied"
+      end
     end
 
     @outcome_string = rock_paper_scissors()
-    pp outcome_string
+
     render({:template=>"game_templates/play_rock"}) #note: don't need to include .html.erb tag
   end
 end
